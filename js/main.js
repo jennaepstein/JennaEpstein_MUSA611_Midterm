@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 let map = L.map('map').setView([52.20408251869462, 24.662590026855465], 5);
-let horodetz_marker = new L. marker([ 52.203714307355916, 24.662590026855465]).bindTooltip('Horodetz').addTo(map);
+let horodetz_marker =  L. marker([ 52.203714307355916, 24.662590026855465]).bindTooltip('<strong>Horodetz</strong>').addTo(map);
 
 let slideNumber = 0;
 let currentLayer = new L.LayerGroup().addTo(map);

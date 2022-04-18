@@ -9,6 +9,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+
+
 .map {
   width: 100%;
 }
@@ -19,9 +21,9 @@ body {
   display: flex;
   flex-direction: column;
 
-  box-shadow: -0.25rem 0 1rem grey;
+  box-shadow: -0.5rem 0 1rem grey;
   padding: 1rem;
-  width: 25rem;
+  width: 50rem;
 }
 
 .slide-content {
@@ -31,7 +33,7 @@ body {
 .slide-controls {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: right;
   column-gap: 0.5rem;
 
   width: 100%;
@@ -64,9 +66,9 @@ body {
 
 
 .slide-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 10px 0, 10px, 0;
 }
 
 .button {

@@ -14,15 +14,14 @@ const countryColors = {
 };
 
 
-// eslint-disable-next-line no-unused-vars
-
 const slides = [
   {
-    title: '<h2>The Changing Borders of Poland</h2>',
-    content: `<p>I always thought that my great-grandmother Jeanette was from Poland - but this is both correct and incorrect.</p> 
-    <p>This web application visualizes her home village of <strong>Horodetz</strong> amidst the changing boundaries of Poland from 1715 through 1994.</p>
-    <p>The background map of Eastern Europe to provide context on the shifting geography relative to today's borders.</p>
-    <p><em>Historic country bourdaries courtesy of https://github.com/aourednik.</em>`,
+    title: '<strong>Exploring Changing Boundaries: Are We Polish?</strong><hr>',
+    content: `<p>Project by Jenna Epstein, dedicated to my maternal lineage</p>
+    <p>I always thought that my great-grandmother Jeanette was from Poland - but this is both correct and incorrect. This story map visualizes her home village of <strong>Horodetz</strong> amidst the changing boundaries of Poland from 1715 through 1994.</p>
+    <p><img src="js/images/jeanette.jpg" height="200"></p>
+    <p>Click the buttons below to scroll through the story. Click on the colored countries to see their names at each period of time. The background map provides context on the shifting geography relative to today's borders.</p>
+    <p><em><small>Historic country boundaries courtesy of <a href="https://github.com/aourednik" target="_blank">https://github.com/aourednik</a></small></em></p>`,
     bounds: [[10.546875,48.253941,36.298828,57.774518]],
   },
   {
@@ -39,9 +38,8 @@ const slides = [
   },
   {
     title: '1783',
-    content: `<p>1772 marked the beginning of the end for the Polish-Lithuanian Commonwealth.</p>
-    <p>The beginning of the end for the Commonwealth came in 1772, with the first of three partitions which carved up Polish lands among the Russian, Prussian, and Austrian Empires.
-    During the first two partitions between 1783 and 1793, Poland remained in part as its own country on the map.</p>`,
+    content: `<p>The beginning of the end for the Commonwealth came in 1772, with the first of three partitions that carved up Polish lands among the Russian, Prussian, and Austrian Empires.</p>
+    <p>During the first two partitions between 1783 and 1793, Poland remained in part as its own country - as shown here on the map.</p>`,
     bounds: [[10.546875,48.253941,36.298828,57.774518]],
     features: L.geoJSON(countries, {
       filter: (feature) => feature.properties.YEAR === "1783",
@@ -54,8 +52,9 @@ const slides = [
   {
     title: '1793-1914',
     content: `<p>From the third partition all the way until the early 1900s, the town of Horodetz was now within the boundaries of the expansive Russian Empire.</p>
-    <p>Poland by name disappeared from the international map. However, the people living there retained their culture and some degree of autonomy. Its territory within the Russian Empire, while part of Russia, was referred to as "Congress Poland."
-    </p>`,
+    <p>The named country of Poland disappeared from the international map, but it was not without resistence. Many Horodetz Jews sided with Poland during the Polish "povstanya" (rebellions).</p>
+    <p>Economically and culturally Jews in the Horodetz shtetl during this time were living mostly as store-keepers, craftsmen, and clergy. The are became an important center for commercial activity due its proximity to a canal</p>.
+    <p>However, the Russian regime also took note of its strategic location. The regime made Horodetz a military stronghold, stationing soldiers in the area starting in 1876.`,
     bounds: [[10.546875,48.253941,36.298828,57.774518]],
     features: L.geoJSON(countries, {
       filter: (feature) => feature.properties.YEAR === "1880",
@@ -67,8 +66,9 @@ const slides = [
   },
   {
     title: '1914',
-    content: `<p>1914 marked the beginning of World War I. It was also the period of time when my great-grandmother was a little girl in Horodetz</p>
-    <p>The Russian Empire's boundaries were expanding north and south - the Polish areas remained unchanged</p>`,
+    content: `<p>1914 marked the beginning of World War I. It was also the period of time when my great-grandmother was a little girl in Horodetz.</p>
+    <p>The Russian Empire's boundaries were expanding north and south - the Polish areas remained unchanged.</p>
+    <p>At this time, the war brought about a violent upheaval, destroying the old way of living. Since the shtetl was located strategically next to two tall riverbanks, it became battlefield between the Russians and the Germans. The shtetl was almost totally demolished: Jewish houses were burnt down, especially those in the center of town.`,
     bounds: [[10.546875,48.253941,36.298828,57.774518]],
     features: L.geoJSON(countries, {
       filter: (feature) => feature.properties.YEAR === "1914",
@@ -80,10 +80,11 @@ const slides = [
   },
   {
     title: '1920',
-    content: `<p>By the end of World War I, Poland regained its independence as its own country - The Republic of Poland also known as the Second Polish Republic.
-     <p>The borders are shifted to the east relative to present-day Poland - it included parts of what are now Ukraine, and Belarus. This territory that was a part of Poland between World War I and World War II, but not a part anymore, is called the "Kresy."</p>
+    content: `<p>By the end of World War I, Poland regained its independence as its own country. The borders included parts of what are now Ukraine and Belarus.</p>
      <p> At this time, the country known at the time of "White Russia" - know Belarus - was carved out between Poland and Russia.</p> 
-     <p>Just as Poland became known on the international stage as its own nation again, however, the situation was becoming dire for Jews. My grandmother immigrated from Horodetz (via Antwerp, Belgium) to the United States in 1921.</p>`,
+     <p>Just as Poland became known on the international stage as its own nation again, however, living conditions deteriorated for Jews in the Horodetz shtetl.
+    My grandmother immigrated from Horodetz (via Antwerp, Belgium) to the United States in 1921.</p>
+     <p><img src="js/images/manifest.jpg" height="200"></p>`,
     bounds: [[10.546875,48.253941,36.298828,57.774518]],
     features: L.geoJSON(countries, {
       filter: (feature) => feature.properties.YEAR === "1920",
@@ -109,7 +110,7 @@ const slides = [
   {
     title: '1945',
     content: `<p>The end of World War II saw parts of eastern Poland fall under the newly-formed USSR - including Horodetz and other eastern areas</p>
-    <p>So While HOrodetz briefly enjoyed status as part of Poland, it changed its geopolitical status once again as it was absorbed by the USSR.</p>`,
+    <p>So while Horodetz was briefly again part of a "Poland", it changed its geopolitical status once again as it was absorbed by the USSR.</p>`,
     bounds: [[10.546875,48.253941,36.298828,57.774518]],
     features: L.geoJSON(countries, {
       filter: (feature) => feature.properties.YEAR === "1945",
@@ -121,7 +122,7 @@ const slides = [
   },
   {
     title: '1994',
-    content: `After the Cold War and the dissolution of the USSR, Belarus gained independence and saw more expansive borders than it did when it was White Russia. Horodetz (spelled "Gorodets" now on European maps), found itself in Belarus.</p>
+    content: `<p>After the Cold War and the dissolution of the USSR, Belarus gained independence and saw more expansive borders than it did when it was White Russia. Horodetz (spelled "Gorodets" now on European maps), found itself in Belarus.</p>
     <p>To this day, there are not many remnants of the vibrant Jewish community that once thrived in Horodetz.</p>
     <p>My mom and I had been planning to visit what does remain, but unfotuantely as American Jewish women, visitng present-day Belarus - not to mention also during the Ukraine-Russia crisis - is unwise.</p>`,
     bounds: [[10.546875,48.253941,36.298828,57.774518]],
